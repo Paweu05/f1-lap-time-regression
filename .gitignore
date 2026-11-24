@@ -221,3 +221,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Project specific ---
+data/cache/*
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+
+models/*.pkl
+!models/.gitkeep
+
+.venv/
+.idea/
+.vscode/
+.ruff_cache/
+.pytest_cache/

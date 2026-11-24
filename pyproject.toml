@@ -1,0 +1,39 @@
+[project]
+name = "f1-lap-time-regression"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Paweu05", email = "psniatala@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "catboost>=1.2.10",
+    "fastf1>=3.9.2",
+    "joblib>=1.6.0",
+    "lightgbm>=4.7.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.5",
+    "optuna>=5.1.0",
+    "pandas>=2.3.3",
+    "pyarrow>=26.0.1",
+    "pyyaml>=6.0.4",
+    "scikit-learn>=1.9.1",
+    "seaborn>=0.13.2",
+    "shap>=0.54.1",
+    "streamlit>=1.67.0",
+    "xgboost>=3.4.1",
+]
+
+[project.scripts]
+f1-lap-time-regression = "f1_lap_time_regression:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]

@@ -1,0 +1,37 @@
+project:
+  name: "f1-lap-time-regression"
+  random_state: 42
+
+data:
+  cache_dir: "data/cache"
+  raw_path: "data/raw/f1_laps_raw.parquet"
+  quali_path: "data/raw/f1_quali_best.parquet"
+  processed_path: "data/processed/f1_features.parquet"
+
+  train_years: [2022, 2023, 2024]
+  test_years: [2025]
+
+  circuits:
+    - "Bahrain"
+    - "Spain"
+    - "Austria"
+    - "Great Britain"
+
+  pit_lane_loss_seconds:
+    Bahrain: 22.8
+    Spain: 21.5
+    Austria: 20.2
+    Great Britain: 24.5
+
+preprocessing:
+  outlier_threshold_pct: 1.07
+  allowed_compounds: ["SOFT", "MEDIUM", "HARD"]
+
+validation:
+  n_splits: 5
+  group_col: "RaceID"
+  target_col: "LapTimeSeconds"
+
+tuning:
+  n_trials: 50
+  metric: "rmse"
