@@ -14,7 +14,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v4
       - name: Set up Python & dependencies
-        run: uv sync
+        run: uv sync --dev
       - name: Run linter (ruff)
         run: uv run ruff check src tests app
       - name: Run tests (pytest)
