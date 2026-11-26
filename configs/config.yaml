@@ -15,13 +15,13 @@ data:
     - "Bahrain"
     - "Spain"
     - "Austria"
-    - "Great Britain"
+    - "Silverstone"
 
   pit_lane_loss_seconds:
     Bahrain: 22.8
     Spain: 21.5
     Austria: 20.2
-    Great Britain: 24.5
+    Silverstone: 24.5
 
 preprocessing:
   outlier_threshold_pct: 1.07
